@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background: #081b29;
+}
+
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .2s;
+    opacity: 0;
+    animation: slideTop 3s ease forwards;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+
+.navbar a:hover{
+    border-bottom: 2px #ededed solid;
+}
+
+.home{
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+
+.homecontent{
+    max-width: 600px;
+}
+
+.homecontent h1{
+    color: #ededed;
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.homecontent h1 span,
+.header a span,
+.sub-title span{
+    color: #00abf0;
+}
+
+.homecontent h3{
+    font-size: 10px;
+    font-weight: 700;
+    color: #00abf0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.homecontent p{
+    color: #ededed;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .1s;
+}
+
+.homecontent .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a{
+    box-shadow: 0 0 5px #00abf0,
+    0 0 25px #00abf0;
+}
+
+.btn-box a:hover{
+    box-shadow: 0 0 5px #00abf0,
+    0 0 25px #00abf0,0 0 50px #00abf0
+    0 0 100px #00abf0, 0 0 200px #00abf0;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+}
+
+
+.btn-box a:nth-child(2)::before{
+    background: #00abf0;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var);
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.homecontent .text-animate{
+    position: relative;
+    width: 32.8rem;
+}
+
+.homecontent .text-animate h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px #00abf0;
+}
+
+
+
+/*------about-------*/
+
+.about{
+    background-color: #081b29;
+    padding: 80px 0;
+}
+
+.row{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-2 p{
+    color: #ededed;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:#ededed
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00abf0;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: #ededed;
+}
+
+.tab-contents ul li span{
+    color: #00abf0;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+/*KEYFRAME ANIMATION*/
+@keyframes slideRight{
+    0%{
+       transform: translateX(-100px);
+       opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+     }
+}
+
+@keyframes slideLeft{
+    0%{
+       transform: translateX(100px);
+       opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+     }
+}
+
+@keyframes slideTop{
+    0%{
+       transform: translateY(100px);
+       opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+     }
+}
+
+@keyframes slideBottom{
+    0%{
+       transform: translateY(-100px);
+       opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+     }
+}

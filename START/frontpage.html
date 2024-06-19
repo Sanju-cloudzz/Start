@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="START.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+     <header class="header">
+        <a href="#" class="logo"><span>S</span>anju_<span>S</span>hree.</a>
+        <!--navbar-->
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+     </header>
+
+     <section class="home">
+        <div class="homecontent">
+            <h1>Hi, I'm <span>S</span>anju <span>S</span>hree</h1>
+           <div class="text-animate">
+            <h3>Frontend Developer</h3>
+        </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Eum saepe unde voluptatum laudantium doloribus
+                 illum amet aspernatur totam quas, 
+                veniam repellat molestiae nulla omnis esse 
+                 consequuntur possimus odio dolores?</p>
+                 <div class="btn-box">
+                    <a href="">Hire Me</a>
+                    <a href="">Let's Talk</a>
+                 </div>
+        </div>
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+        </div>
+     </section>
+     <!-----------------------------------about start----------------------------------------->
+     <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pics/female.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About <span>Me</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                         Obcaecati nam est nulla natus eaque incidunt recusandae,
+                         distinctio error labore Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Eaque tempore, quibusdam expedita 
+                         quasi incidunt illo deserunt numquam omnis fugiat eum?eveniet 
+                         neque minima quasi doloremque aliquam quos aut quas pariatur odio! 
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus veniam 
+                         quod nulla quidem assumenda? A ipsa doloribus eos inventore reiciendis,
+                          ut officia neque vero, nam omnis odio, obcaecati quis suscipit?
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>HTML/CSS</span><br>Designing Web interfaces</li>
+                            <li><span>Web Design</span><br>Creating User interface</li>
+                            <li><span>JavaScript</span><br>Implementing responsive design</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>HTML/CSS Training</li>
+                            <li><span>2021 - 2022</span><br>Team lead at StarApp LLC.</li>
+                            <li><span>2023 - 2024</span><br>Intership at Codesoft </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Engineering</li>
+                            <li><span>2019</span><br>Higher Secondary Education</li>
+                            <li><span>2017</span><br>Higher Education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+       </script>
+       <!---------------------------about end------------------------------------->
+
+
+</body>
+</html>
